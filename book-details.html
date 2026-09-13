@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <p><img src="assets/logo.png" alt="Logo" class="logo"></p>
+        <p>
+            <a href="#">Create account</a>
+            <a href="#">Sign in</a>
+        </p>
+    </div>
+
+    <div class="header-bottom">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="profile-demo.html">Profile</a>
+            <a href="about.html">About</a>
+        </nav>
+
+        <form action="catalog.html" method="get">
+            <input type="search" name="q" placeholder="Find your next favorite book...">
+        </form>
+    </div>
+</header>
+
+<main>
+
+    <article class="book-header">
+        <img src="assets/book-placeholder.jpg" alt="Book Title cover" class="book-icon">
+
+        <div class="book-info">
+            <h1>Book Title</h1>
+            <p>by Author</p>
+
+            <div class="book-tags">
+                <span>Genre</span>
+                <span>Rating</span>
+            </div>
+
+            <section>
+                <h2>Description</h2>
+                <p>The cool book about the amazing adventures of the main character.</p>
+            </section>
+        </div>
+    </article>
+
+    <section>
+        <h2>Reviews</h2>
+
+        <article>
+            <p>Username <span>Date</span></p>
+            <p>Rating</p>
+            <p>Placeholder review text line one.</p>
+            <p>Placeholder review text line two.</p>
+        </article>
+
+        <article>
+            <p>Username <span>Date</span></p>
+            <p>Rating</p>
+            <p>Placeholder review text line one.</p>
+            <p>Placeholder review text line two.</p>
+        </article>
+
+        <article>
+            <p>Username <span>Date</span></p>
+            <p>Rating</p>
+            <p>Placeholder review text line one.</p>
+            <p>Placeholder review text line two.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Write your Review</h2>
+
+        <p class="signin-badge"><a href="#">Sign in to leave a review</a></p>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Select rating</legend>
+                <label><input type="radio" name="rating" value="1"> 1</label>
+                <label><input type="radio" name="rating" value="2"> 2</label>
+                <label><input type="radio" name="rating" value="3"> 3</label>
+                <label><input type="radio" name="rating" value="4"> 4</label>
+                <label><input type="radio" name="rating" value="5"> 5</label>
+            </fieldset>
+
+            <label for="review-text">Your review</label>
+            <textarea id="review-text" name="review" placeholder="type your review..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-left">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <p>Discover, borrow and read your favorite books online.</p>
+        <p>Created by Bauyrzhan Tamerlan</p>
+    </div>
+
+    <div class="footer-right">
+        <p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help &amp; FAQ</a>
+        </p>
+        <p><a href="about.html">Contact us</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -10,8 +10,8 @@
 
 <header>
     <div class="header-top">
-        <p><img src="assets/logo.png" alt="Logo" class="logo"></p>
-        <p>
+        <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
+        <p class="header-actions">
             <a href="#">Create account</a>
             <a href="#">Sign in</a>
         </p>
@@ -25,20 +25,20 @@
             <a href="about.html">About</a>
         </nav>
 
-        <form action="catalog.html" method="get">
-            <input type="search" name="q" placeholder="Find your next favorite book...">
+        <form action="catalog.html" method="get" class="header-search">
+            <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
         </form>
     </div>
 </header>
 
-<main>
+<main class="page-main">
 
     <article class="book-header">
         <img src="assets/book-placeholder.jpg" alt="Book Title cover" class="book-icon">
 
         <div class="book-info">
             <h1>Book Title</h1>
-            <p>by Author</p>
+            <p class="book-author">by Author</p>
 
             <div class="book-tags">
                 <span>Genre</span>
@@ -55,22 +55,22 @@
     <section>
         <h2>Reviews</h2>
 
-        <article>
-            <p>Username <span>Date</span></p>
+        <article class="review-card">
+            <p class="review-card-head">Username <span>Date</span></p>
             <p>Rating</p>
             <p>Placeholder review text line one.</p>
             <p>Placeholder review text line two.</p>
         </article>
 
-        <article>
-            <p>Username <span>Date</span></p>
+        <article class="review-card">
+            <p class="review-card-head">Username <span>Date</span></p>
             <p>Rating</p>
             <p>Placeholder review text line one.</p>
             <p>Placeholder review text line two.</p>
         </article>
 
-        <article>
-            <p>Username <span>Date</span></p>
+        <article class="review-card">
+            <p class="review-card-head">Username <span>Date</span></p>
             <p>Rating</p>
             <p>Placeholder review text line one.</p>
             <p>Placeholder review text line two.</p>
@@ -83,7 +83,7 @@
         <p class="signin-badge"><a href="#">Sign in to leave a review</a></p>
 
         <form action="#" method="post">
-            <fieldset>
+            <fieldset class="review-form-fieldset">
                 <legend>Select rating</legend>
                 <label><input type="radio" name="rating" value="1"> 1</label>
                 <label><input type="radio" name="rating" value="2"> 2</label>
@@ -93,7 +93,7 @@
             </fieldset>
 
             <label for="review-text">Your review</label>
-            <textarea id="review-text" name="review" placeholder="type your review..."></textarea>
+            <textarea id="review-text" name="review" placeholder="type your review..." class="review-textarea"></textarea>
 
             <button type="submit">Submit</button>
         </form>
@@ -104,8 +104,8 @@
 <footer>
     <div class="footer-left">
         <img src="assets/logo.png" alt="Logo" class="logo">
-        <p>Discover, borrow and read your favorite books online.</p>
-        <p>Created by Bauyrzhan Tamerlan</p>
+        <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
+        <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
     </div>
 
     <div class="footer-right">

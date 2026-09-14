@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
 }
 
-body > main {
+.page-main {
     flex: 1;
 }
 
@@ -41,7 +41,8 @@ header {
     padding: 0.4rem 2rem;
 }
 
-header p {
+.header-logo-wrap,
+.header-actions {
     margin: 0;
 }
 
@@ -54,11 +55,11 @@ header nav {
     gap: 1.5rem;
 }
 
-header form {
+.header-search {
     display: flex;
 }
 
-header input {
+.header-search-input {
     width: 260px;
     margin-bottom: 0;
     padding: 0.35rem 0.6rem;
@@ -85,11 +86,12 @@ footer a {
     gap: 0.4rem;
 }
 
-.footer-left p {
+.footer-tagline,
+.footer-credit {
     margin: 0;
 }
 
-.footer-left p:last-child {
+.footer-credit {
     margin-top: 1.5rem;
 }
 
@@ -120,24 +122,7 @@ article {
     margin-bottom: 1rem;
 }
 
-article > p:first-child {
-    background: #efe9db;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 0;
-}
-
-article > a:last-child {
-    display: block;
-    text-align: center;
-    margin-top: 0.6rem;
-    background: #7a2e2e;
-    color: #fff;
-    padding: 0.6rem;
-    text-decoration: none;
-}
-
-section > a {
+.section-btn {
     display: inline-block;
     background: #7a2e2e;
     color: #fff;
@@ -151,13 +136,12 @@ section > a {
     gap: 1.5rem;
 }
 
-.cards > h1,
-.cards > h2,
-.cards > nav {
+.cards-heading,
+.cards-nav {
     flex-basis: 100%;
 }
 
-.cards > article {
+.book-card {
     flex: 1 1 0;
     min-width: 0;
     margin-bottom: 0;
@@ -170,17 +154,23 @@ article h3 {
     font-size: 1.05rem;
 }
 
-.cards > article h3 {
+.book-card-title {
     height: 3.6rem;
     overflow: hidden;
 }
 
-.cards > article p {
+.book-card-author {
     margin: 0;
 }
 
-.cards > article > a:last-child {
+.book-card-btn {
+    display: block;
+    text-align: center;
     margin-top: auto;
+    background: #7a2e2e;
+    color: #fff;
+    padding: 0.6rem;
+    text-decoration: none;
 }
 
 .logo {
@@ -238,7 +228,7 @@ article h3 {
     margin: 0 0 0.3rem;
 }
 
-.book-info > p {
+.book-author {
     margin: 0 0 1rem;
 }
 
@@ -261,14 +251,17 @@ article h3 {
     padding: 0.4rem 0.9rem;
 }
 
-main > section:first-of-type > article {
+.review-card {
     background: #efe9db;
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
 }
 
-main > section:first-of-type > article > p:first-child,
+.review-card-head,
 .review-meta {
+    background: #efe9db;
+    padding: 2rem 0;
+    text-align: center;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -310,7 +303,7 @@ main > section:first-of-type > article > p:first-child,
     margin-bottom: 0;
 }
 
-.profile-info > a {
+.profile-edit-btn {
     display: inline-block;
     background: #7a2e2e;
     color: #fff;
@@ -330,7 +323,7 @@ main > section:first-of-type > article > p:first-child,
     text-decoration: none;
 }
 
-main > section:last-of-type fieldset {
+.review-form-fieldset {
     border: none;
     padding: 0;
     display: flex;
@@ -338,7 +331,7 @@ main > section:last-of-type fieldset {
     align-items: center;
 }
 
-main > section:last-of-type fieldset label {
+.review-form-fieldset label {
     display: inline-block;
     width: auto;
     margin: 0;
@@ -347,12 +340,12 @@ main > section:last-of-type fieldset label {
     cursor: pointer;
 }
 
-main > section:last-of-type fieldset input[type="radio"] {
+.review-form-fieldset input[type="radio"] {
     width: auto;
     margin-bottom: 0;
 }
 
-main > section:last-of-type textarea {
+.review-textarea {
     background: #efe9db;
 }
 
@@ -378,33 +371,33 @@ main > section:last-of-type textarea {
     align-content: flex-start;
 }
 
-.catalog-page > header,
-.catalog-page > footer {
+.catalog-header,
+.catalog-footer {
     flex: 1 1 100%;
 }
 
-.catalog-page > aside {
+.catalog-sidebar {
     width: 260px;
 }
 
-.catalog-page > main {
+.catalog-main {
     flex: 1;
     min-width: 0;
 }
 
-.catalog-page > main.cards {
+.catalog-main.cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1.5rem;
     align-items: start;
 }
 
-.catalog-page > main.cards > h1,
-.catalog-page > main.cards > nav {
+.catalog-main.cards .cards-heading,
+.catalog-main.cards .cards-nav {
     grid-column: 1 / -1;
 }
 
-.catalog-page > main.cards > article {
+.catalog-main.cards .book-card {
     flex: none;
     margin-bottom: 0;
 }
@@ -498,11 +491,11 @@ button {
     cursor: pointer;
 }
 
-main > section:first-child {
+.hero-section {
     padding-bottom: 1rem;
     text-align: center;
 }
 
-main > section:first-child + section {
+.cards-after-hero {
     padding-top: 0;
 }

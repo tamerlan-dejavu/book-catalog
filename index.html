@@ -10,8 +10,8 @@
 
 <header>
   <div class="header-top">
-    <p><img src="assets/logo.png" alt="Logo" class="logo"></p>
-    <p>
+    <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
+    <p class="header-actions">
       <a href="#">Create account</a>
       <a href="#">Sign in</a>
     </p>
@@ -25,57 +25,58 @@
       <a href="about.html">About</a>
     </nav>
 
-    <form action="catalog.html" method="get">
-      <input type="search" name="q" placeholder="Find your next favorite book...">
+    <form action="catalog.html" method="get" class="header-search">
+      <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
     </form>
   </div>
 </header>
 
-<main>
+<main class="page-main">
 
-  <section>
+  <section class="hero-section">
     <h1>Your Next Great Read Is Waiting</h1>
     <p>Borrow thousands of books from every genre - fiction, non-fiction, biographies and more - all in one place, ready whenever you are.</p>
-    <a href="catalog.html">Start Borrow</a>
+    <a href="catalog.html" class="section-btn">Start Borrow</a>
   </section>
 
-  <section class="cards">
-    <h2>Bestsellers</h2>
+  <section class="cards cards-after-hero">
+    <h2 class="cards-heading">Bestsellers</h2>
 
-    <article>
+    <article class="book-card">
       <img src="assets/book1.png" alt="Harry Potter and the Sorcerer's Stone cover" class="book-cover">
-      <h3>Harry Potter and the Sorcerer's Stone</h3>
-      <p>J.K. Rowling</p>
-      <a href="book-details.html">Borrow</a>
+      <h3 class="book-card-title">Harry Potter and the Sorcerer's Stone</h3>
+      <p class="book-card-author">J.K. Rowling</p>
+      <a href="book-details.html" class="book-card-btn">Borrow</a>
     </article>
 
-    <article>
+    <article class="book-card">
       <img src="assets/book2.png" alt="The Great Gatsby cover" class="book-cover">
-      <h3>The Great Gatsby</h3>
-      <p>F. Scott Fitzgerald</p>
-      <a href="book-details.html">Borrow</a>
+      <h3 class="book-card-title">The Great Gatsby</h3>
+      <p class="book-card-author">F. Scott Fitzgerald</p>
+      <a href="book-details.html" class="book-card-btn">Borrow</a>
     </article>
 
-    <article>
+    <article class="book-card">
       <img src="assets/1984.png" alt="1984 cover" class="book-cover">
-      <h3>1984</h3>
-      <p>George Orwell</p>
-      <a href="book-details-1984.html">Borrow</a>
+      <h3 class="book-card-title">1984</h3>
+      <p class="book-card-author">George Orwell</p>
+      <a href="book-details-1984.html" class="book-card-btn">Borrow</a>
     </article>
 
-    <article>
+    <article class="book-card">
       <img src="assets/book4.png" alt="To Kill a Mockingbird cover" class="book-cover">
-      <h3>To Kill a Mockingbird</h3>
-      <p>Harper Lee</p>
-      <a href="book-details.html">Borrow</a>
+      <h3 class="book-card-title">To Kill a Mockingbird</h3>
+      <p class="book-card-author">Harper Lee</p>
+      <a href="book-details.html" class="book-card-btn">Borrow</a>
     </article>
 
-    <article>
+    <article class="book-card">
       <img src="assets/book5.png" alt="The Da Vinci Code cover" class="book-cover">
-      <h3>The Da Vinci Code</h3>
-      <p>Dan Brown</p>
-      <a href="book-details.html">Borrow</a>
+      <h3 class="book-card-title">The Da Vinci Code</h3>
+      <p class="book-card-author">Dan Brown</p>
+      <a href="book-details.html" class="book-card-btn">Borrow</a>
     </article>
+
   </section>
 
   <section>
@@ -109,8 +110,8 @@
 <footer>
   <div class="footer-left">
     <img src="assets/logo.png" alt="Logo" class="logo">
-    <p>Discover, borrow and read your favorite books online.</p>
-    <p>Created by Bauyrzhan Tamerlan</p>
+    <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
+    <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
   </div>
 
   <div class="footer-right">

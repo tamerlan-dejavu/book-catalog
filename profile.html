@@ -10,8 +10,8 @@
 
 <header>
     <div class="header-top">
-        <p><img src="assets/logo.png" alt="Logo" class="logo"></p>
-        <p>
+        <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
+        <p class="header-actions">
             <a href="#">Switch account</a>
             <a href="#">Log out</a>
         </p>
@@ -25,13 +25,13 @@
             <a href="about.html">About</a>
         </nav>
 
-        <form action="catalog.html" method="get">
-            <input type="search" name="q" placeholder="Find your next favorite book...">
+        <form action="catalog.html" method="get" class="header-search">
+            <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
         </form>
     </div>
 </header>
 
-<main>
+<main class="page-main">
 
     <article class="profile-header">
         <img src="assets/profile-placeholder.jpg" alt="Profile icon" class="profile-icon">
@@ -58,14 +58,14 @@
                 <p class="profile-field">2000</p>
             </fieldset>
 
-            <a href="#">Change profile</a>
+            <a href="#" class="profile-edit-btn">Change profile</a>
         </div>
     </article>
 
     <section>
         <h2>My reviews</h2>
 
-        <article>
+        <article class="review-card">
             <p class="review-meta">
                 Name of the book <span class="rating">Rating</span>
                 <span class="date">Date</span>
@@ -74,7 +74,7 @@
             <p>Placeholder review text line one.</p>
         </article>
 
-        <article>
+        <article class="review-card">
             <p class="review-meta">
                 Name of the book <span class="rating">Rating</span>
                 <span class="date">Date</span>
@@ -83,7 +83,7 @@
             <p>Placeholder review text line one.</p>
         </article>
 
-        <article>
+        <article class="review-card">
             <p class="review-meta">
                 Name of the book <span class="rating">Rating</span>
                 <span class="date">Date</span>
@@ -98,8 +98,8 @@
 <footer>
     <div class="footer-left">
         <img src="assets/logo.png" alt="Logo" class="logo">
-        <p>Discover, borrow and read your favorite books online.</p>
-        <p>Created by Bauyrzhan Tamerlan</p>
+        <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
+        <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
     </div>
 
     <div class="footer-right">

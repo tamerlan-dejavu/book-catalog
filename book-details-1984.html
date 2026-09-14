@@ -10,8 +10,8 @@
 
 <header>
     <div class="header-top">
-        <p><img src="assets/logo.png" alt="Logo" class="logo"></p>
-        <p>
+        <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
+        <p class="header-actions">
             <a href="#">Create account</a>
             <a href="#">Sign in</a>
         </p>
@@ -25,20 +25,20 @@
             <a href="about.html">About</a>
         </nav>
 
-        <form action="catalog.html" method="get">
-            <input type="search" name="q" placeholder="Find your next favorite book...">
+        <form action="catalog.html" method="get" class="header-search">
+            <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
         </form>
     </div>
 </header>
 
-<main>
+<main class="page-main">
 
     <article class="book-header">
         <img src="assets/1984.png" alt="1984 cover" class="book-icon">
 
         <div class="book-info">
             <h1>1984</h1>
-            <p>by George Orwell</p>
+            <p class="book-author">by George Orwell</p>
 
             <div class="book-tags">
                 <span>Dystopian Fiction</span>
@@ -56,20 +56,20 @@
     <section>
         <h2>Reviews</h2>
 
-        <article>
-            <p>kulikov eezoy <span>March 3, 2026</span></p>
+        <article class="review-card">
+            <p class="review-card-head">kulikov eezoy <span>March 3, 2026</span></p>
             <p>5 stars</p>
             <p>Chilling and still relevant decades later.</p>
         </article>
 
-        <article>
-            <p>minamova <span>February 14, 2026</span></p>
+        <article class="review-card">
+            <p class="review-card-head">minamova <span>February 14, 2026</span></p>
             <p>4 stars</p>
             <p>Where is Jennie?</p>
         </article>
 
-        <article>
-            <p>amir san <span>January 28, 2026</span></p>
+        <article class="review-card">
+            <p class="review-card-head">amir san <span>January 28, 2026</span></p>
             <p>5 stars</p>
             <p>Required reading, honestly.</p>
         </article>
@@ -81,7 +81,7 @@
         <p class="signin-badge"><a href="#">Sign in to leave a review</a></p>
 
         <form action="#" method="post">
-            <fieldset>
+            <fieldset class="review-form-fieldset">
                 <legend>Select rating</legend>
                 <label><input type="radio" name="rating" value="1"> 1</label>
                 <label><input type="radio" name="rating" value="2"> 2</label>
@@ -91,7 +91,7 @@
             </fieldset>
 
             <label for="review-text">Your review</label>
-            <textarea id="review-text" name="review" placeholder="type your review..."></textarea>
+            <textarea id="review-text" name="review" placeholder="type your review..." class="review-textarea"></textarea>
 
             <button type="submit">Submit</button>
         </form>
@@ -102,8 +102,8 @@
 <footer>
     <div class="footer-left">
         <img src="assets/logo.png" alt="Logo" class="logo">
-        <p>Discover, borrow and read your favorite books online.</p>
-        <p>Created by Bauyrzhan Tamerlan</p>
+        <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
+        <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
     </div>
 
     <div class="footer-right">

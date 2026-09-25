@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Details</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-<body>
+<body class="book-details-page"> <!-- TASK 3: display demos scoped to this page -->
 
 <header>
     <div class="header-top">
@@ -16,20 +17,27 @@
             <a href="#">Sign in</a>
         </p>
     </div>
-
-    <div class="header-bottom">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="profile-demo.html">Profile</a>
-            <a href="about.html">About</a>
-        </nav>
-
-        <form action="catalog.html" method="get" class="header-search">
-            <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
-        </form>
-    </div>
 </header>
+
+<div class="header-bottom">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="profile-demo.html">Profile</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <form action="catalog.html" method="get" class="header-search">
+        <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
+    </form>
+</div>
+
+<!-- TASK 7: sticky table of contents, sticks right below the nav -->
+<nav class="toc-bar" aria-label="Section navigation">
+    <a href="#description">Description</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#write-review">Write your Review</a>
+</nav>
 
 <main class="page-main">
 
@@ -45,39 +53,39 @@
                 <span>Rating</span>
             </div>
 
-            <section>
+            <section id="description">
                 <h2>Description</h2>
                 <p>The cool book about the amazing adventures of the main character.</p>
             </section>
         </div>
     </article>
 
-    <section>
+    <section id="reviews">
         <h2>Reviews</h2>
 
         <article class="review-card">
-            <p class="review-card-head">Username <span>Date</span></p>
+            <p class="review-meta">Username <span class="demo-hide-inline">Date</span></p> <!-- TASK 3: display none on inline -->
+            <p class="demo-block-to-inline">Rating</p> <!-- TASK 3: block to inline -->
+            <p>Placeholder review text line one.</p>
+            <p>Placeholder review text line two.</p>
+        </article>
+
+        <article class="review-card demo-hide-block"> <!-- TASK 3: display none on block -->
+            <p class="review-meta">Username <span>Date</span></p>
             <p>Rating</p>
             <p>Placeholder review text line one.</p>
             <p>Placeholder review text line two.</p>
         </article>
 
         <article class="review-card">
-            <p class="review-card-head">Username <span>Date</span></p>
-            <p>Rating</p>
-            <p>Placeholder review text line one.</p>
-            <p>Placeholder review text line two.</p>
-        </article>
-
-        <article class="review-card">
-            <p class="review-card-head">Username <span>Date</span></p>
+            <p class="review-meta">Username <span>Date</span></p>
             <p>Rating</p>
             <p>Placeholder review text line one.</p>
             <p>Placeholder review text line two.</p>
         </article>
     </section>
 
-    <section>
+    <section id="write-review">
         <h2>Write your Review</h2>
 
         <p class="signin-badge"><a href="#">Sign in to leave a review</a></p>
@@ -111,7 +119,7 @@
     <div class="footer-right">
         <p>
             <a href="#">Privacy Policy</a>
-            <a href="#">Help &amp; FAQ</a>
+            <a href="#" class="demo-inline-to-block">Help &amp; FAQ</a> <!-- TASK 3: inline to block -->
         </p>
         <p><a href="about.html">Contact us</a></p>
     </div>

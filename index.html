@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-<body>
+<body class="home-page">
 
 <header>
   <div class="header-top">
@@ -34,11 +35,14 @@
 <main class="page-main">
 
   <section class="hero-section">
+    <!-- TASK 8: z-index middle layer — decorative watermark behind the heading -->
+    <span class="hero-watermark" aria-hidden="true">📖</span>
     <h1>Your Next Great Read Is Waiting</h1>
     <p>Borrow thousands of books from every genre - fiction, non-fiction, biographies and more - all in one place, ready whenever you are.</p>
     <a href="catalog.html" class="section-btn">Start Borrow</a>
   </section>
 
+  <!-- TASK 1: float layout — Bestsellers -->
   <section class="cards cards-after-hero">
     <h2 class="cards-heading">Bestsellers</h2>
 
@@ -79,6 +83,7 @@
 
   </section>
 
+  <!-- TASK 1: float layout — Categories -->
   <section>
     <h2>Categories</h2>
     <nav class="tiles">
@@ -107,6 +112,7 @@
 
 </main>
 
+<!-- TASK 1: float layout — Footer -->
 <footer>
   <div class="footer-left">
     <img src="assets/logo.png" alt="Logo" class="logo">
@@ -122,6 +128,9 @@
     <p><a href="about.html">Contact us</a></p>
   </div>
 </footer>
+
+<!-- TASK 6: fixed positioning — author badge stays visible while scrolling -->
+<div class="site-author-badge">Created by Bauyrzhan Tamerlan</div>
 
 </body>
 </html>

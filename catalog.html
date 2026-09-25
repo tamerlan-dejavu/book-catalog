@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalog</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
@@ -38,11 +39,19 @@
 
         <fieldset>
             <legend>Genre</legend>
-            <label><input type="checkbox" name="genre" value="fiction"> Fiction</label>
-            <label><input type="checkbox" name="genre" value="non-fiction"> Non-Fiction</label>
-            <label><input type="checkbox" name="genre" value="biography"> Biography</label>
-            <label><input type="checkbox" name="genre" value="fantasy"> Fantasy</label>
-            <label><input type="checkbox" name="genre" value="sci-fi"> Sci-Fi</label>
+            <!-- TASK 4: overflow: auto — scrollbar appears only if the genre list grows too long -->
+            <div class="genre-scroll">
+                <label><input type="checkbox" name="genre" value="fiction"> Fiction</label>
+                <label><input type="checkbox" name="genre" value="non-fiction"> Non-Fiction</label>
+                <label><input type="checkbox" name="genre" value="biography"> Biography</label>
+                <label><input type="checkbox" name="genre" value="fantasy"> Fantasy</label>
+                <label><input type="checkbox" name="genre" value="sci-fi"> Sci-Fi</label>
+                <label><input type="checkbox" name="genre" value="mystery"> Mystery</label>
+                <label><input type="checkbox" name="genre" value="romance"> Romance</label>
+                <label><input type="checkbox" name="genre" value="horror"> Horror</label>
+                <label><input type="checkbox" name="genre" value="poetry"> Poetry</label>
+                <label><input type="checkbox" name="genre" value="history"> History</label>
+            </div>
         </fieldset>
 
         <fieldset>
@@ -53,11 +62,14 @@
 
         <fieldset>
             <legend>Rating</legend>
-            <label><input type="checkbox" name="rating" value="5"> 5 stars</label>
-            <label><input type="checkbox" name="rating" value="4"> 4 stars</label>
-            <label><input type="checkbox" name="rating" value="3"> 3 stars</label>
-            <label><input type="checkbox" name="rating" value="2"> 2 stars</label>
-            <label><input type="checkbox" name="rating" value="1"> 1 stars</label>
+            <!-- TASK 4: overflow: scroll — scrollbar is always reserved, even if content barely overflows -->
+            <div class="rating-scroll">
+                <label><input type="checkbox" name="rating" value="5"> 5 stars</label>
+                <label><input type="checkbox" name="rating" value="4"> 4 stars</label>
+                <label><input type="checkbox" name="rating" value="3"> 3 stars</label>
+                <label><input type="checkbox" name="rating" value="2"> 2 stars</label>
+                <label><input type="checkbox" name="rating" value="1"> 1 stars</label>
+            </div>
         </fieldset>
 
         <button type="submit">Apply</button>
@@ -68,7 +80,11 @@
     <h1 class="cards-heading">Catalog</h1>
 
     <article class="book-card">
-        <img src="assets/book-placeholder.jpg" alt="Book Title cover" class="book-cover">
+        <!-- TASK 4: overflow: visible — the ribbon intentionally overflows the cover's edge -->
+        <div class="book-cover-wrap">
+            <img src="assets/book-placeholder.jpg" alt="Book Title cover" class="book-cover">
+            <span class="bestseller-ribbon">Bestseller</span>
+        </div>
         <h3 class="book-card-title">Book Title</h3>
         <p class="book-card-author">Author Name</p>
         <a href="book-details.html" class="book-card-btn">Borrow</a>

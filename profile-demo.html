@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tamerlan Bauyrzhan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-<body>
+<body class="profile-page">
 
 <header>
     <div class="header-top">
@@ -34,7 +35,11 @@
 <main class="page-main">
 
     <article class="profile-header">
-        <img src="assets/profile-tamerlan.png" alt="Tamerlan Bauyrzhan profile photo" class="profile-icon">
+        <!-- TASK 5: position relative (wrapper) + absolute (badge) -->
+        <div class="profile-icon-wrap">
+            <img src="assets/profile-tamerlan.png" alt="Tamerlan Bauyrzhan profile photo" class="profile-icon">
+            <span class="verified-badge">✓ Verified</span>
+        </div>
 
         <div class="profile-info">
             <h1>Tamerlan Bauyrzhan</h1>

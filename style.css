@@ -68,7 +68,7 @@ header nav,
     padding: 0.35rem 0.6rem;
 }
 
-/* TASK 1: float layout */
+/* TASK 1 */
 
 footer {
     background: #2a2420;
@@ -178,7 +178,7 @@ article h3 {
 
 .book-card-title {
     height: 3.6rem;
-    overflow: hidden; /* TASK 4: hidden — truncates long book titles so all cards stay equal height */
+    overflow: hidden; /* TASK 4 */
 }
 
 .book-card-author {
@@ -398,7 +398,7 @@ article h3 {
     margin-right: 0;
 }
 
-/* TASK 9: CSS Grid page layout */
+/* TASK 9 */
 
 .catalog-page {
     display: grid;
@@ -544,7 +544,7 @@ button {
     padding-top: 0;
 }
 
-/* TASK 1: float layout */
+/* TASK 1 */
 
 @media (max-width: 1024px) {
     .book-card {
@@ -605,7 +605,7 @@ button {
     }
 }
 
-/* TASK 2: width vs max-width demo */
+/* TASK 2 */
 
 .about-quote {
     width: 800px;
@@ -617,25 +617,25 @@ button {
     font-style: italic;
 }
 
-/* TASK 3: display demo */
+/* TASK 3 */
 
 .book-details-page .demo-inline-to-block {
-    display: block; /* inline to block */
+    display: block;
 }
 
 .book-details-page .demo-block-to-inline {
-    display: inline; /* block to inline */
+    display: inline;
 }
 
 .book-details-page .demo-hide-inline {
-    display: none; /* hide inline */
+    display: none;
 }
 
 .book-details-page .demo-hide-block {
-    display: none; /* hide block */
+    display: none;
 }
 
-/* TASK 4: overflow, demonstrated on real content */
+/* TASK 4 */
 
 .genre-scroll {
     max-height: 150px;
@@ -663,15 +663,15 @@ button {
     transform: rotate(8deg);
 }
 
-/* TASK 5: relative + absolute positioning */
+/* TASK 5 */
 
 .profile-icon-wrap {
-    position: relative; /* becomes the positioning context for the badge */
+    position: relative;
     display: inline-block;
 }
 
 .verified-badge {
-    position: absolute; /* positioned relative to .profile-icon-wrap, not the page */
+    position: absolute;
     bottom: 10px;
     right: 10px;
     background: #2a2420;
@@ -681,22 +681,22 @@ button {
     border-radius: 3px;
 }
 
-/* TASK 6: fixed positioning */
+/* TASK 6 */
 
 .home-page header {
-    position: fixed; /* header stays pinned to the top of the viewport while scrolling */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* top layer — always above everything else */
+    z-index: 100;
 }
 
 .home-page .page-main {
-    padding-top: 96px; /* compensates for the fixed header's height so content isn't hidden underneath */
+    padding-top: 96px; /* offsets the fixed header height */
 }
 
 .site-author-badge {
-    position: fixed; /* stays in the same viewport corner regardless of scroll position */
+    position: fixed;
     bottom: 16px;
     right: 16px;
     background: #2a2420;
@@ -707,17 +707,17 @@ button {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* TASK 7: sticky positioning */
+/* TASK 7 */
 
 .book-details-page .header-bottom {
     position: sticky;
     top: 0;
-    z-index: 10; /* stays above the content that scrolls underneath it */
+    z-index: 10;
 }
 
 .toc-bar {
     position: sticky;
-    top: 48px; /* height of the sticky .header-bottom above it — verify and adjust in browser */
+    top: 48px; /* verify against .header-bottom height in browser */
     z-index: 9;
     display: flex;
     gap: 1.5rem;
@@ -731,19 +731,19 @@ button {
     font-weight: bold;
 }
 
-/* TASK 8: z-index layering */
+/* TASK 8 */
 
 .home-page::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1; /* bottom layer — sits behind all content */
+    z-index: -1;
     background-image: radial-gradient(circle, rgba(122, 46, 46, 0.08) 1px, transparent 1px);
     background-size: 24px 24px;
 }
 
 .home-page .hero-section {
-    position: relative; /* creates a positioning context for the watermark */
+    position: relative;
 }
 
 .hero-watermark {
@@ -753,15 +753,15 @@ button {
     transform: translate(-50%, -50%);
     font-size: 14rem;
     opacity: 0.15;
-    z-index: 0; /* middle layer — behind the text, above the page background */
-    pointer-events: none; /* so it never blocks clicks on the button below */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-section h1,
 .hero-section p,
 .hero-section .section-btn {
-    position: relative; /* needed so z-index actually takes effect */
-    z-index: 1; /* above the watermark */
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -807,7 +807,7 @@ button {
     }
 }
 
-/* TASK 10: media queries for different screen sizes */
+/* TASK 10 */
 
 /* Large screens: > 1200px */
 @media (min-width: 1201px) {

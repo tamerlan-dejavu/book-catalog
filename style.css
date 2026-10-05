@@ -1,9 +1,12 @@
+/* Base */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #2a2420;
     background: #f7f3ea;
     line-height: 1.6;
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,6 +24,37 @@ h1, h2, h3 {
 a {
     color: #7a2e2e;
 }
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+aside {
+    background: #efe9db;
+    padding: 1.5rem;
+}
+
+article {
+    background: #fff;
+    border: 1px solid #d9d0be;
+    border-top: 3px solid #7a2e2e;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+/* Header */
 
 header {
     color: #fff;
@@ -68,7 +102,23 @@ header nav,
     padding: 0.35rem 0.6rem;
 }
 
-/* TASK 1 */
+@media (max-width: 768px) {
+    .header-bottom {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .header-bottom nav {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .header-search-input {
+        width: 100%;
+    }
+}
+
+/* Footer */
 
 footer {
     background: #2a2420;
@@ -77,20 +127,8 @@ footer {
     margin-top: 2rem;
 }
 
-footer::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 footer a {
     color: #fff;
-}
-
-.footer-left {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
 }
 
 .footer-left > * + * {
@@ -106,34 +144,15 @@ footer a {
     margin-top: 1.5rem;
 }
 
-.footer-right {
-    float: right;
-    width: 50%;
-    box-sizing: border-box;
-    text-align: right;
+/* Home */
+
+.hero-section {
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-section {
-    padding: 2rem 0;
-}
-
-aside {
-    background: #efe9db;
-    padding: 1.5rem;
-}
-
-article {
-    background: #fff;
-    border: 1px solid #d9d0be;
-    border-top: 3px solid #7a2e2e;
-    padding: 1rem;
-    margin-bottom: 1rem;
+.cards-after-hero {
+    padding-top: 0;
 }
 
 .section-btn {
@@ -144,32 +163,7 @@ article {
     text-decoration: none;
 }
 
-.cards {
-    display: block;
-}
-
-.cards::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.cards-heading,
-.cards-nav {
-    width: 100%;
-}
-
-.book-card {
-    float: left;
-    box-sizing: border-box;
-    width: 18.4%;
-    margin-right: 2%;
-    margin-bottom: 1.5rem;
-}
-
-.book-card:last-child {
-    margin-right: 0;
-}
+/* Book card */
 
 article h3 {
     margin: 0.6rem 0 0.2rem;
@@ -178,7 +172,6 @@ article h3 {
 
 .book-card-title {
     height: 3.6rem;
-    overflow: hidden; /* TASK 4 */
 }
 
 .book-card-author {
@@ -188,18 +181,10 @@ article h3 {
 .book-card-btn {
     display: block;
     text-align: center;
-    margin-top: auto;
     background: #7a2e2e;
     color: #fff;
     padding: 0.6rem;
     text-decoration: none;
-}
-
-.logo {
-    display: block;
-    height: 40px;
-    width: auto;
-    align-self: flex-start;
 }
 
 .book-cover {
@@ -222,6 +207,8 @@ article h3 {
     font-size: 0;
     margin-bottom: 0.5rem;
 }
+
+/* Book details & profile */
 
 .book-header,
 .profile-header {
@@ -334,6 +321,8 @@ article h3 {
     text-decoration: none;
 }
 
+/* Review form */
+
 .signin-badge {
     display: inline-block;
     background: #efe9db;
@@ -371,79 +360,7 @@ article h3 {
     background: #efe9db;
 }
 
-.tiles {
-    display: block;
-}
-
-.tiles::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.tiles a {
-    float: left;
-    width: 18.4%;
-    margin-right: 2%;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 1.2rem 1rem;
-    background: #efe9db;
-    color: #2a2420;
-    text-decoration: none;
-}
-
-.tiles a:last-child {
-    margin-right: 0;
-}
-
-/* TASK 9 */
-
-.catalog-page {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    grid-template-areas:
-        "header  header"
-        "sidebar main"
-        "footer  footer";
-}
-
-.catalog-header {
-    grid-area: header;
-}
-
-.catalog-sidebar {
-    grid-area: sidebar;
-}
-
-.catalog-main {
-    grid-area: main;
-    min-width: 0;
-}
-
-.catalog-footer {
-    grid-area: footer;
-}
-
-.catalog-main.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1.5rem;
-    align-items: start;
-}
-
-.catalog-main.cards .cards-heading,
-.catalog-main.cards .cards-nav {
-    grid-column: 1 / -1;
-}
-
-.catalog-main.cards .book-card {
-    float: none;
-    width: auto;
-    margin-right: 0;
-    margin-bottom: 0;
-}
+/* Forms */
 
 fieldset {
     border: 1px solid #d9d0be;
@@ -509,24 +426,6 @@ textarea {
     min-height: 110px;
 }
 
-.about-box {
-    border: 2px solid #7a2e2e;
-    background: #efe9db;
-    padding: 1.5rem;
-    max-width: 500px;
-    margin: 0 auto;
-    overflow-x: auto;
-}
-
-#contact-name,
-#contact-email {
-    max-width: 250px;
-}
-
-#contact-message {
-    max-width: 500px;
-}
-
 button {
     background: #7a2e2e;
     color: #fff;
@@ -535,27 +434,101 @@ button {
     cursor: pointer;
 }
 
-.hero-section {
-    padding-bottom: 1rem;
+/* About */
+
+.about-box {
+    border: 2px solid #7a2e2e;
+    background: #efe9db;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* TASK 1: float */
+
+.cards {
+    display: block;
+}
+
+.cards::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cards-heading,
+.cards-nav {
+    width: 100%;
+}
+
+.book-card {
+    float: left;
+    box-sizing: border-box;
+    width: 18.4%;
+    margin-right: 2%;
+    margin-bottom: 1.5rem;
+}
+
+.book-card:last-child {
+    margin-right: 0;
+}
+
+.tiles {
+    display: block;
+}
+
+.tiles::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tiles a {
+    float: left;
+    width: 18.4%;
+    margin-right: 2%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
     text-align: center;
+    padding: 1.2rem 1rem;
+    background: #efe9db;
+    color: #2a2420;
+    text-decoration: none;
 }
 
-.cards-after-hero {
-    padding-top: 0;
+.tiles a:last-child {
+    margin-right: 0;
 }
 
-/* TASK 1 */
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer-left {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.footer-right {
+    float: right;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: right;
+}
 
 @media (max-width: 1024px) {
     .book-card {
         width: 48%;
     }
 
-    .book-card:nth-child(odd) {
+    .book-card:nth-of-type(odd) {
         margin-right: 2%;
     }
 
-    .book-card:nth-child(even) {
+    .book-card:nth-of-type(even) {
         margin-right: 0;
     }
 
@@ -567,11 +540,11 @@ button {
         width: 48%;
     }
 
-    .tiles a:nth-child(odd) {
+    .tiles a:nth-of-type(odd) {
         margin-right: 2%;
     }
 
-    .tiles a:nth-child(even) {
+    .tiles a:nth-of-type(even) {
         margin-right: 0;
     }
 
@@ -605,7 +578,11 @@ button {
     }
 }
 
-/* TASK 2 */
+/* TASK 2: fixed width */
+
+.about-box {
+    overflow-x: auto;
+}
 
 .about-quote {
     width: 800px;
@@ -617,7 +594,7 @@ button {
     font-style: italic;
 }
 
-/* TASK 3 */
+/* TASK 3: display */
 
 .book-details-page .demo-inline-to-block {
     display: block;
@@ -635,7 +612,11 @@ button {
     display: none;
 }
 
-/* TASK 4 */
+/* TASK 4: overflow */
+
+.book-card-title {
+    overflow: hidden;
+}
 
 .genre-scroll {
     max-height: 150px;
@@ -663,7 +644,7 @@ button {
     transform: rotate(8deg);
 }
 
-/* TASK 5 */
+/* TASK 5: relative + absolute */
 
 .profile-icon-wrap {
     position: relative;
@@ -681,7 +662,7 @@ button {
     border-radius: 3px;
 }
 
-/* TASK 6 */
+/* TASK 6: fixed */
 
 .home-page header {
     position: fixed;
@@ -692,7 +673,7 @@ button {
 }
 
 .home-page .page-main {
-    padding-top: 96px; /* offsets the fixed header height */
+    padding-top: 96px; /* header height */
 }
 
 .site-author-badge {
@@ -707,7 +688,7 @@ button {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* TASK 7 */
+/* TASK 7: sticky */
 
 .book-details-page .header-bottom {
     position: sticky;
@@ -717,7 +698,7 @@ button {
 
 .toc-bar {
     position: sticky;
-    top: 48px; /* verify against .header-bottom height in browser */
+    top: 41px; /* header-bottom height */
     z-index: 9;
     display: flex;
     gap: 1.5rem;
@@ -731,7 +712,7 @@ button {
     font-weight: bold;
 }
 
-/* TASK 8 */
+/* TASK 8: z-index */
 
 .home-page::before {
     content: "";
@@ -764,6 +745,53 @@ button {
     z-index: 1;
 }
 
+/* TASK 9: grid */
+
+.catalog-page {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+}
+
+.catalog-header {
+    grid-area: header;
+}
+
+.catalog-sidebar {
+    grid-area: sidebar;
+}
+
+.catalog-main {
+    grid-area: main;
+    min-width: 0;
+}
+
+.catalog-footer {
+    grid-area: footer;
+}
+
+.catalog-main.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.catalog-main.cards .cards-heading,
+.catalog-main.cards .cards-nav {
+    grid-column: 1 / -1;
+}
+
+.catalog-main.cards .book-card {
+    float: none;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
     .catalog-page {
         grid-template-columns: 1fr;
@@ -774,26 +802,6 @@ button {
             "footer";
     }
 }
-
-/* fix: header-bottom wraps on narrow screens */
-
-@media (max-width: 768px) {
-    .header-bottom {
-        flex-wrap: wrap;
-        gap: 0.6rem;
-    }
-
-    .header-bottom nav {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
-
-    .header-search-input {
-        width: 100%;
-    }
-}
-
-/* fix: book grid overflow on mobile */
 
 @media (max-width: 700px) {
     .catalog-main.cards {
@@ -807,9 +815,8 @@ button {
     }
 }
 
-/* TASK 10 */
+/* TASK 10: media queries */
 
-/* Large screens: > 1200px */
 @media (min-width: 1201px) {
     .profile-page .profile-icon,
     .profile-page .profile-icon-wrap {
@@ -822,9 +829,6 @@ button {
     }
 }
 
-/* Laptop: 769px – 1200px (default styles already cover this, no override needed) */
-
-/* Tablet: 481px – 768px */
 @media (max-width: 768px) {
     .profile-page .profile-header {
         gap: 1.2rem;
@@ -841,7 +845,6 @@ button {
     }
 }
 
-/* Mobile: <= 480px */
 @media (max-width: 480px) {
     .profile-page .profile-header {
         flex-direction: column;

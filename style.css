@@ -6,7 +6,6 @@ body {
     color: #2a2420;
     background: #f7f3ea;
     line-height: 1.6;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -102,22 +101,6 @@ header nav,
     padding: 0.35rem 0.6rem;
 }
 
-@media (max-width: 768px) {
-    .header-bottom {
-        flex-wrap: wrap;
-        gap: 0.6rem;
-    }
-
-    .header-bottom nav {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
-
-    .header-search-input {
-        width: 100%;
-    }
-}
-
 /* Footer */
 
 footer {
@@ -129,10 +112,6 @@ footer {
 
 footer a {
     color: #fff;
-}
-
-.footer-left > * + * {
-    margin-top: 0.4rem;
 }
 
 .footer-tagline,
@@ -446,10 +425,6 @@ button {
 
 /* TASK 1: float */
 
-.cards {
-    display: block;
-}
-
 .cards::after {
     content: "";
     display: table;
@@ -471,10 +446,6 @@ button {
 
 .book-card:last-child {
     margin-right: 0;
-}
-
-.tiles {
-    display: block;
 }
 
 .tiles::after {
@@ -586,6 +557,7 @@ footer::after {
 
 .about-quote {
     width: 800px;
+    max-width: 100%;
     box-sizing: border-box;
     margin: 1rem 0 0;
     padding: 1rem 1.5rem;
@@ -673,7 +645,7 @@ footer::after {
 }
 
 .home-page .page-main {
-    padding-top: 96px; /* header height */
+    padding-top: 96px;
 }
 
 .site-author-badge {
@@ -698,7 +670,7 @@ footer::after {
 
 .toc-bar {
     position: sticky;
-    top: 41px; /* header-bottom height */
+    top: 41px;
     z-index: 9;
     display: flex;
     gap: 1.5rem;
@@ -719,8 +691,9 @@ footer::after {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background-image: radial-gradient(circle, rgba(122, 46, 46, 0.08) 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
 }
 
 .home-page .hero-section {
@@ -750,6 +723,7 @@ footer::after {
 .catalog-page {
     display: grid;
     grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header  header"
         "sidebar main"
@@ -792,17 +766,6 @@ footer::after {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
-    .catalog-page {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "sidebar"
-            "main"
-            "footer";
-    }
-}
-
 @media (max-width: 700px) {
     .catalog-main.cards {
         grid-template-columns: repeat(2, 1fr);
@@ -827,9 +790,56 @@ footer::after {
     .profile-page .profile-info h1 {
         font-size: 2.6rem;
     }
+
+    .profile-page .reviews-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .profile-page .reviews-list .review-card {
+        margin-bottom: 0; /* spacing comes from gap */
+    }
 }
 
 @media (max-width: 768px) {
+    /* Header */
+    .header-bottom {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .header-bottom nav {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .header-search-input {
+        width: 100%;
+    }
+
+    /* TASK 6 */
+    .home-page .page-main {
+        padding-top: 130px;
+    }
+
+    /* TASK 7 */
+    .toc-bar {
+        top: 77px;
+    }
+
+    /* TASK 9 */
+    .catalog-page {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    /* TASK 10 */
     .profile-page .profile-header {
         gap: 1.2rem;
     }

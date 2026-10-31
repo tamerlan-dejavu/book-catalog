@@ -1,5 +1,3 @@
-// Helper: turns text from prompt() into a number.
-// Replaces a comma with a dot ("2,75" -> "2.75") and returns NaN if the user pressed Cancel.
 function toNumber(text) {
   if (text === null) {
     return NaN;
@@ -50,7 +48,6 @@ function convertTemperature() {
 }
 
 // Task 4. Calculates pay with overtime:
-// up to 40 hours - normal rate, hours 41-60 - rate * 1.5, over 60 hours - rate * 2.
 function calculateOvertime() {
   const hours = toNumber(prompt("Enter hours:"));
   const rate = toNumber(prompt("Enter rate per hour:"));
@@ -98,7 +95,6 @@ function sumEvenFor() {
 }
 
 // Task 7. Turns the text "12, 5, 33" into an array of numbers,
-// finds max, min and average in a for loop and shows them with alert() and on the page.
 function arrayStats() {
   const text = document.getElementById("numbers7").value;
   const parts = text.split(",");

@@ -1,129 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book Details</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-<body class="book-details-page"> <!-- TASK 3 -->
+<body class="bg-body-tertiary d-flex flex-column min-vh-100">
 
-<header>
-    <div class="header-top">
-        <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
-        <p class="header-actions">
-            <a href="#">Create account</a>
-            <a href="#">Sign in</a>
-        </p>
+<header class="bg-dark py-2">
+  <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+    <a href="index.html"><img src="assets/logo.png" alt="Logo" height="40"></a>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-white">Create account</a>
+      <a href="#" class="text-white">Sign in</a>
     </div>
+  </div>
 </header>
 
-<!-- TASK 7 -->
-<div class="header-bottom">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="catalog.html">Catalog</a>
-        <a href="profile-demo.html">Profile</a>
-        <a href="about.html">About</a>
-    </nav>
+<div class="sticky-top">
+  <nav class="navbar navbar-expand navbar-dark" style="background-color: #7a2e2e;">
+    <div class="container-fluid px-4 flex-wrap gap-2">
+      <ul class="navbar-nav flex-wrap gap-3 me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile-demo.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="js-tasks.html">JS Tasks</a></li>
+      </ul>
+      <form action="catalog.html" method="get" class="d-flex flex-grow-1 flex-md-grow-0" role="search">
+        <input type="search" name="q" placeholder="Find your next favorite book..." class="form-control form-control-sm" aria-label="Search">
+      </form>
+    </div>
+  </nav>
 
-    <form action="catalog.html" method="get" class="header-search">
-        <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
-    </form>
+  <nav class="bg-secondary-subtle border-bottom" aria-label="Section navigation">
+    <div class="container-fluid px-4 py-2 d-flex flex-wrap gap-3">
+      <a href="#description" class="fw-bold text-danger text-decoration-none">Description</a>
+      <a href="#reviews" class="fw-bold text-danger text-decoration-none">Reviews</a>
+      <a href="#write-review" class="fw-bold text-danger text-decoration-none">Write your Review</a>
+    </div>
+  </nav>
 </div>
 
-<!-- TASK 7 -->
-<nav class="toc-bar" aria-label="Section navigation">
-    <a href="#description">Description</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#write-review">Write your Review</a>
-</nav>
+<main class="container flex-grow-1">
 
-<main class="page-main">
+  <article class="pt-4">
+    <div class="row g-4">
+      <div class="col-md-auto">
+        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="object-fit-cover bg-secondary-subtle" width="220" height="300">
+      </div>
+      <div class="col-md">
+        <h1 class="mb-1">Book Title</h1>
+        <p class="mb-3">by Author</p>
 
-    <article class="book-header">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-icon">
-
-        <div class="book-info">
-            <h1>Book Title</h1>
-            <p class="book-author">by Author</p>
-
-            <div class="book-tags">
-                <span>Genre</span>
-                <span>Rating</span>
-            </div>
-
-            <section id="description">
-                <h2>Description</h2>
-                <p>The cool book about the amazing adventures of the main character.</p>
-            </section>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="bg-secondary-subtle px-3 py-1">Genre</span>
+          <span class="bg-secondary-subtle px-3 py-1">Rating</span>
         </div>
+
+        <section id="description">
+          <h2 class="mb-2">Description</h2>
+          <p>The cool book about the amazing adventures of the main character.</p>
+        </section>
+      </div>
+    </div>
+  </article>
+
+  <section id="reviews" class="py-4">
+    <h2 class="mb-3">Reviews</h2>
+
+    <article class="card card-body bg-secondary-subtle border-0 border-top border-3 border-danger mb-3">
+      <div class="d-flex justify-content-between fw-bold mb-1"><span>Username</span><span>Date</span></div>
+      <p class="mb-1">Rating</p>
+      <p class="mb-1">Placeholder review text line one.</p>
+      <p class="mb-0">Placeholder review text line two.</p>
     </article>
 
-    <section id="reviews">
-        <h2>Reviews</h2>
+    <article class="card card-body bg-secondary-subtle border-0 border-top border-3 border-danger mb-3">
+      <div class="d-flex justify-content-between fw-bold mb-1"><span>Username</span><span>Date</span></div>
+      <p class="mb-1">Rating</p>
+      <p class="mb-1">Placeholder review text line one.</p>
+      <p class="mb-0">Placeholder review text line two.</p>
+    </article>
 
-        <article class="review-card">
-            <p class="review-meta">Username <span class="demo-hide-inline">Date</span></p> <!-- TASK 3 -->
-            <p class="demo-block-to-inline">Rating</p> <!-- TASK 3 -->
-            <p class="demo-block-to-inline">Placeholder review text line one.</p> <!-- TASK 3 -->
-            <p>Placeholder review text line two.</p>
-        </article>
+    <article class="card card-body bg-secondary-subtle border-0 border-top border-3 border-danger mb-3">
+      <div class="d-flex justify-content-between fw-bold mb-1"><span>Username</span><span>Date</span></div>
+      <p class="mb-1">Rating</p>
+      <p class="mb-1">Placeholder review text line one.</p>
+      <p class="mb-0">Placeholder review text line two.</p>
+    </article>
+  </section>
 
-        <article class="review-card demo-hide-block"> <!-- TASK 3 -->
-            <p class="review-meta">Username <span>Date</span></p>
-            <p>Rating</p>
-            <p>Placeholder review text line one.</p>
-            <p>Placeholder review text line two.</p>
-        </article>
+  <section id="write-review" class="pb-4">
+    <h2 class="mb-3">Write your Review</h2>
 
-        <article class="review-card">
-            <p class="review-meta">Username <span>Date</span></p>
-            <p>Rating</p>
-            <p>Placeholder review text line one.</p>
-            <p>Placeholder review text line two.</p>
-        </article>
-    </section>
+    <p class="d-inline-block bg-secondary-subtle px-3 py-2 mb-3"><a href="#" class="text-danger text-decoration-none">Sign in to leave a review</a></p>
 
-    <section id="write-review">
-        <h2>Write your Review</h2>
+    <form action="#" method="post">
+      <fieldset class="mb-3">
+        <legend class="fs-6">Select rating</legend>
+        <div class="d-flex flex-wrap gap-2">
+          <label class="bg-secondary-subtle px-3 py-2"><input class="form-check-input me-1" type="radio" name="rating" value="1"> 1</label>
+          <label class="bg-secondary-subtle px-3 py-2"><input class="form-check-input me-1" type="radio" name="rating" value="2"> 2</label>
+          <label class="bg-secondary-subtle px-3 py-2"><input class="form-check-input me-1" type="radio" name="rating" value="3"> 3</label>
+          <label class="bg-secondary-subtle px-3 py-2"><input class="form-check-input me-1" type="radio" name="rating" value="4"> 4</label>
+          <label class="bg-secondary-subtle px-3 py-2"><input class="form-check-input me-1" type="radio" name="rating" value="5"> 5</label>
+        </div>
+      </fieldset>
 
-        <p class="signin-badge"><a href="#">Sign in to leave a review</a></p>
+      <label for="review-text" class="form-label">Your review</label>
+      <textarea id="review-text" name="review" placeholder="type your review..." class="form-control bg-secondary-subtle mb-3" rows="4"></textarea>
 
-        <form action="#" method="post">
-            <fieldset class="review-form-fieldset">
-                <legend>Select rating</legend>
-                <label><input type="radio" name="rating" value="1"> 1</label>
-                <label><input type="radio" name="rating" value="2"> 2</label>
-                <label><input type="radio" name="rating" value="3"> 3</label>
-                <label><input type="radio" name="rating" value="4"> 4</label>
-                <label><input type="radio" name="rating" value="5"> 5</label>
-            </fieldset>
-
-            <label for="review-text">Your review</label>
-            <textarea id="review-text" name="review" placeholder="type your review..." class="review-textarea"></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </section>
 
 </main>
 
-<footer>
-    <div class="footer-left">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
-        <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
-    </div>
-
-    <div class="footer-right">
+<footer class="bg-dark text-white mt-4">
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <img src="assets/logo.png" alt="Logo" height="40">
+        <p class="mt-2 mb-0">Discover, borrow and read your favorite books online.</p>
+        <p class="mt-4 mb-0">Created by Bauyrzhan Tamerlan</p>
+      </div>
+      <div class="col-md-6 text-md-end">
         <p>
-            <a href="#">Privacy Policy</a>
-            <a href="#" class="demo-inline-to-block">Help &amp; FAQ</a> <!-- TASK 3 -->
+          <a href="#" class="text-white me-2">Privacy Policy</a>
+          <a href="#" class="text-white">Help &amp; FAQ</a>
         </p>
-        <p><a href="about.html">Contact us</a></p>
+        <p class="mb-0"><a href="about.html" class="text-white">Contact us</a></p>
+      </div>
     </div>
+  </div>
 </footer>
 
 </body>

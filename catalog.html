@@ -1,219 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Catalog</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-<body class="catalog-page"> <!-- TASK 9 -->
+<body class="bg-body-tertiary d-flex flex-column min-vh-100">
 
-<header class="catalog-header">
-    <div class="header-top">
-        <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
-        <p class="header-actions">
-            <a href="#">Create account</a>
-            <a href="#">Sign in</a>
-        </p>
+<header class="bg-dark py-2">
+  <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+    <a href="index.html"><img src="assets/logo.png" alt="Logo" height="40"></a>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-white">Create account</a>
+      <a href="#" class="text-white">Sign in</a>
     </div>
-
-    <div class="header-bottom">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="profile-demo.html">Profile</a>
-            <a href="about.html">About</a>
-        </nav>
-
-        <form action="catalog.html" method="get" class="header-search">
-            <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
-        </form>
-    </div>
+  </div>
 </header>
 
-<aside class="catalog-sidebar">
+<div class="sticky-top">
+  <nav class="navbar navbar-expand navbar-dark" style="background-color: #7a2e2e;">
+    <div class="container-fluid px-4 flex-wrap gap-2">
+      <ul class="navbar-nav flex-wrap gap-3 me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile-demo.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="js-tasks.html">JS Tasks</a></li>
+      </ul>
+      <form action="catalog.html" method="get" class="d-flex flex-grow-1 flex-md-grow-0" role="search">
+        <input type="search" name="q" placeholder="Find your next favorite book..." class="form-control form-control-sm" aria-label="Search">
+      </form>
+    </div>
+  </nav>
+</div>
+
+<div class="row g-0 flex-grow-1">
+
+  <aside class="col-md-4 col-lg-3 col-xl-2 bg-secondary-subtle p-4">
     <h2>Filters</h2>
 
     <form action="catalog.html" method="get">
 
-        <fieldset>
-            <legend>Genre</legend>
-            <!-- TASK 4 -->
-            <div class="genre-scroll">
-                <label><input type="checkbox" name="genre" value="fiction"> Fiction</label>
-                <label><input type="checkbox" name="genre" value="non-fiction"> Non-Fiction</label>
-                <label><input type="checkbox" name="genre" value="biography"> Biography</label>
-                <label><input type="checkbox" name="genre" value="fantasy"> Fantasy</label>
-                <label><input type="checkbox" name="genre" value="sci-fi"> Sci-Fi</label>
-                <label><input type="checkbox" name="genre" value="mystery"> Mystery</label>
-                <label><input type="checkbox" name="genre" value="romance"> Romance</label>
-                <label><input type="checkbox" name="genre" value="horror"> Horror</label>
-                <label><input type="checkbox" name="genre" value="poetry"> Poetry</label>
-                <label><input type="checkbox" name="genre" value="history"> History</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>Year</legend>
-            <p class="year-range"><span>-3000</span><span>2026</span></p>
-            <input type="range" name="year" min="-3000" max="2026" value="2026">
-        </fieldset>
-
-        <fieldset>
-            <legend>Rating</legend>
-            <!-- TASK 4 -->
-            <div class="rating-scroll">
-                <label><input type="checkbox" name="rating" value="5"> 5 stars</label>
-                <label><input type="checkbox" name="rating" value="4"> 4 stars</label>
-                <label><input type="checkbox" name="rating" value="3"> 3 stars</label>
-                <label><input type="checkbox" name="rating" value="2"> 2 stars</label>
-                <label><input type="checkbox" name="rating" value="1"> 1 stars</label>
-            </div>
-        </fieldset>
-
-        <button type="submit">Apply</button>
-    </form>
-</aside>
-
-<main class="cards catalog-main page-main">
-    <h1 class="cards-heading">Catalog</h1>
-
-    <article class="book-card">
-        <!-- TASK 4 -->
-        <div class="book-cover-wrap">
-            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-            <span class="bestseller-ribbon">Bestseller</span>
+      <fieldset class="mb-3">
+        <legend class="fs-6 fw-bold">Genre</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="fiction" id="genre-fiction">
+          <label class="form-check-label" for="genre-fiction">Fiction</label>
         </div>
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="non-fiction" id="genre-non-fiction">
+          <label class="form-check-label" for="genre-non-fiction">Non-Fiction</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="biography" id="genre-biography">
+          <label class="form-check-label" for="genre-biography">Biography</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="fantasy" id="genre-fantasy">
+          <label class="form-check-label" for="genre-fantasy">Fantasy</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="sci-fi" id="genre-sci-fi">
+          <label class="form-check-label" for="genre-sci-fi">Sci-Fi</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="mystery" id="genre-mystery">
+          <label class="form-check-label" for="genre-mystery">Mystery</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="romance" id="genre-romance">
+          <label class="form-check-label" for="genre-romance">Romance</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="horror" id="genre-horror">
+          <label class="form-check-label" for="genre-horror">Horror</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="poetry" id="genre-poetry">
+          <label class="form-check-label" for="genre-poetry">Poetry</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="genre" value="history" id="genre-history">
+          <label class="form-check-label" for="genre-history">History</label>
+        </div>
+      </fieldset>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <fieldset class="mb-3">
+        <legend class="fs-6 fw-bold">Year</legend>
+        <div class="d-flex justify-content-between small"><span>-3000</span><span>2026</span></div>
+        <input type="range" class="form-range" name="year" min="-3000" max="2026" value="2026" aria-label="Year">
+      </fieldset>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <fieldset class="mb-3">
+        <legend class="fs-6 fw-bold">Rating</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="rating" value="5" id="rating-5">
+          <label class="form-check-label" for="rating-5">5 stars</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="rating" value="4" id="rating-4">
+          <label class="form-check-label" for="rating-4">4 stars</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="rating" value="3" id="rating-3">
+          <label class="form-check-label" for="rating-3">3 stars</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="rating" value="2" id="rating-2">
+          <label class="form-check-label" for="rating-2">2 stars</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="rating" value="1" id="rating-1">
+          <label class="form-check-label" for="rating-1">1 stars</label>
+        </div>
+      </fieldset>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <button type="submit" class="btn btn-danger">Apply</button>
+    </form>
+  </aside>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+  <main class="col-md-8 col-lg-9 col-xl-10 p-4">
+    <h1 class="mb-3">Catalog</h1>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-4">
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <div class="position-relative">
+              <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">Bestseller</span>
+            </div>
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <article class="book-card">
-        <img src="assets/book-placeholder.svg" alt="Book Title cover" class="book-cover">
-        <h3 class="book-card-title">Book Title</h3>
-        <p class="book-card-author">Author Name</p>
-        <a href="book-details.html" class="book-card-btn">Borrow</a>
-    </article>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
 
-    <nav aria-label="Pagination" class="cards-nav">
-        <a href="catalog.html?page=1">&lt;</a>
-        <a href="catalog.html?page=1">1</a>
-        <a href="catalog.html?page=2">2</a>
-        <a href="catalog.html?page=3">3</a>
-        <a href="catalog.html?page=4">4</a>
-        <a href="catalog.html?page=5">5</a>
-        <a href="catalog.html?page=5">&gt;</a>
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 border-0 border-top border-3 border-danger shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <img src="assets/book-placeholder.svg" alt="Book Title cover" class="card-img-top object-fit-cover" height="160">
+            <h3 class="card-title fs-6 fw-bold mt-2">Book Title</h3>
+            <p class="card-text">Author Name</p>
+            <a href="book-details.html" class="btn btn-danger w-100 mt-auto">Borrow</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <nav aria-label="Pagination" class="mt-4">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link text-danger" href="catalog.html?page=1">&lt;</a></li>
+        <li class="page-item"><a class="page-link bg-danger border-danger text-white" href="catalog.html?page=1" aria-current="page">1</a></li>
+        <li class="page-item"><a class="page-link text-danger" href="catalog.html?page=2">2</a></li>
+        <li class="page-item"><a class="page-link text-danger" href="catalog.html?page=3">3</a></li>
+        <li class="page-item"><a class="page-link text-danger" href="catalog.html?page=4">4</a></li>
+        <li class="page-item"><a class="page-link text-danger" href="catalog.html?page=5">5</a></li>
+        <li class="page-item"><a class="page-link text-danger" href="catalog.html?page=5">&gt;</a></li>
+      </ul>
     </nav>
+  </main>
 
-</main>
+</div>
 
-<footer class="catalog-footer">
-    <div class="footer-left">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
-        <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
-    </div>
-
-    <div class="footer-right">
+<footer class="bg-dark text-white mt-4">
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <img src="assets/logo.png" alt="Logo" height="40">
+        <p class="mt-2 mb-0">Discover, borrow and read your favorite books online.</p>
+        <p class="mt-4 mb-0">Created by Bauyrzhan Tamerlan</p>
+      </div>
+      <div class="col-md-6 text-md-end">
         <p>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Help &amp; FAQ</a>
+          <a href="#" class="text-white me-2">Privacy Policy</a>
+          <a href="#" class="text-white">Help &amp; FAQ</a>
         </p>
-        <p><a href="about.html">Contact us</a></p>
+        <p class="mb-0"><a href="about.html" class="text-white">Contact us</a></p>
+      </div>
     </div>
+  </div>
 </footer>
 
 </body>

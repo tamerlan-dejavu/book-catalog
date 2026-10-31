@@ -1,123 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tamerlan Bauyrzhan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tamerlan Bauyrzhan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
-<body class="profile-page"> <!-- TASK 10 -->
+<body class="bg-body-tertiary d-flex flex-column min-vh-100">
 
-<header>
-    <div class="header-top">
-        <p class="header-logo-wrap"><img src="assets/logo.png" alt="Logo" class="logo"></p>
-        <p class="header-actions">
-            <a href="#">Switch account</a>
-            <a href="#">Log out</a>
-        </p>
+<header class="bg-dark py-2">
+  <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+    <a href="index.html"><img src="assets/logo.png" alt="Logo" height="40"></a>
+    <div class="d-flex gap-3">
+      <a href="#" class="text-white">Switch account</a>
+      <a href="#" class="text-white">Log out</a>
     </div>
-
-    <div class="header-bottom">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="profile.html">Profile</a>
-            <a href="about.html">About</a>
-        </nav>
-
-        <form action="catalog.html" method="get" class="header-search">
-            <input type="search" name="q" placeholder="Find your next favorite book..." class="header-search-input">
-        </form>
-    </div>
+  </div>
 </header>
 
-<main class="page-main">
+<div class="sticky-top">
+  <nav class="navbar navbar-expand navbar-dark" style="background-color: #7a2e2e;">
+    <div class="container-fluid px-4 flex-wrap gap-2">
+      <ul class="navbar-nav flex-wrap gap-3 me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile-demo.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="js-tasks.html">JS Tasks</a></li>
+      </ul>
+      <form action="catalog.html" method="get" class="d-flex flex-grow-1 flex-md-grow-0" role="search">
+        <input type="search" name="q" placeholder="Find your next favorite book..." class="form-control form-control-sm" aria-label="Search">
+      </form>
+    </div>
+  </nav>
+</div>
 
-    <article class="profile-header">
-        <!-- TASK 5 -->
-        <div class="profile-icon-wrap">
-            <img src="assets/profile-tamerlan.png" alt="Tamerlan Bauyrzhan profile photo" class="profile-icon">
-            <span class="verified-badge">✓ Verified</span>
+<main class="container flex-grow-1">
+
+  <article class="pt-4">
+    <div class="row g-4">
+      <div class="col-md-auto">
+        <div class="position-relative d-inline-block">
+          <img src="assets/profile-tamerlan.png" alt="Tamerlan Bauyrzhan profile photo" class="d-block object-fit-cover border border-2 border-danger bg-secondary-subtle" width="220" height="300">
+          <span class="badge bg-dark position-absolute bottom-0 end-0 m-2">✓ Verified</span>
         </div>
+      </div>
 
-        <div class="profile-info">
-            <h1>Tamerlan Bauyrzhan</h1>
+      <div class="col-md">
+        <h1>Tamerlan Bauyrzhan</h1>
 
-            <label>Email-address</label>
-            <p class="profile-field">tamerlan.bauyrzhan@email.com</p>
+        <label class="form-label mb-1">Email-address</label>
+        <p class="bg-secondary-subtle p-2 mb-3">tamerlan.bauyrzhan@email.com</p>
 
-            <label>Phone number</label>
-            <p class="profile-field">+7 701 234 5678</p>
+        <label class="form-label mb-1">Phone number</label>
+        <p class="bg-secondary-subtle p-2 mb-3">+7 701 234 5678</p>
 
-            <fieldset>
-                <legend>Date of birth</legend>
+        <fieldset class="mb-2">
+          <legend class="fs-6 mb-1">Date of birth</legend>
+          <div class="d-flex flex-wrap gap-2">
+            <p class="bg-secondary-subtle px-3 py-2 mb-0">29</p>
+            <p class="bg-secondary-subtle px-3 py-2 mb-0">September</p>
+            <p class="bg-secondary-subtle px-3 py-2 mb-0">2007</p>
+          </div>
+        </fieldset>
 
-                <label>Day</label>
-                <p class="profile-field">29</p>
+        <a href="#" class="btn btn-danger mt-2">Change profile</a>
+      </div>
+    </div>
+  </article>
 
-                <label>Month</label>
-                <p class="profile-field">September</p>
+  <section class="py-4">
+    <h2 class="mb-3">My reviews</h2>
 
-                <label>Year</label>
-                <p class="profile-field">2007</p>
-            </fieldset>
+    <div class="row g-3">
+      <div class="col-12">
+        <article class="card card-body h-100 bg-secondary-subtle border-0 border-top border-3 border-danger">
+          <div class="d-flex flex-wrap justify-content-between gap-2 mb-1">
+            <span class="fw-bold">Meditations</span><span>March 3, 2026</span>
+          </div>
+          <p class="text-warning mb-1" aria-label="4 out of 5 stars">★★★★☆</p>
+          <p class="mb-1">Marcus Aurelius</p>
+          <p class="mb-1">Read this during a stressful semester and it genuinely helped.</p>
+          <p class="mb-0">Short chapters make it easy to revisit anytime.</p>
+        </article>
+      </div>
 
-            <a href="#" class="profile-edit-btn">Change profile</a>
-        </div>
-    </article>
+      <div class="col-12">
+        <article class="card card-body h-100 bg-secondary-subtle border-0 border-top border-3 border-danger">
+          <div class="d-flex flex-wrap justify-content-between gap-2 mb-1">
+            <span class="fw-bold">Letters from a Stoic</span><span>February 10, 2026</span>
+          </div>
+          <p class="text-warning mb-1" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="mb-1">Seneca</p>
+          <p class="mb-0">GOAT.</p>
+        </article>
+      </div>
 
-    <section>
-        <h2>My reviews</h2>
-
-        <div class="reviews-list"> <!-- TASK 10 -->
-            <article class="review-card">
-                <p class="review-meta">
-                    Meditations <span class="rating">4 stars</span>
-                    <span class="date">March 3, 2026</span>
-                </p>
-                <p>Marcus Aurelius</p>
-                <p>Read this during a stressful semester and it genuinely helped.</p>
-                <p>Short chapters make it easy to revisit anytime.</p>
-            </article>
-
-            <article class="review-card">
-                <p class="review-meta">
-                    Letters from a Stoic <span class="rating">5 stars</span>
-                    <span class="date">February 10, 2026</span>
-                </p>
-                <p>Seneca</p>
-                <p>GOAT.</p>
-            </article>
-
-            <article class="review-card">
-                <p class="review-meta">
-                    Discourses <span class="rating">3 stars</span>
-                    <span class="date">January 22, 2026</span>
-                </p>
-                <p>Epictetus</p>
-                <p>My favorite of the three so far.</p>
-                <p>The focus on what's within our control changed how I think.</p>
-            </article>
-        </div>
-    </section>
+      <div class="col-12">
+        <article class="card card-body h-100 bg-secondary-subtle border-0 border-top border-3 border-danger">
+          <div class="d-flex flex-wrap justify-content-between gap-2 mb-1">
+            <span class="fw-bold">Discourses</span><span>January 22, 2026</span>
+          </div>
+          <p class="text-warning mb-1" aria-label="3 out of 5 stars">★★★☆☆</p>
+          <p class="mb-1">Epictetus</p>
+          <p class="mb-1">My favorite of the three so far.</p>
+          <p class="mb-0">The focus on what's within our control changed how I think.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<footer>
-    <div class="footer-left">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <p class="footer-tagline">Discover, borrow and read your favorite books online.</p>
-        <p class="footer-credit">Created by Bauyrzhan Tamerlan</p>
-    </div>
-
-    <div class="footer-right">
+<footer class="bg-dark text-white mt-4">
+  <div class="container-fluid px-4 py-4">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <img src="assets/logo.png" alt="Logo" height="40">
+        <p class="mt-2 mb-0">Discover, borrow and read your favorite books online.</p>
+        <p class="mt-4 mb-0">Created by Bauyrzhan Tamerlan</p>
+      </div>
+      <div class="col-md-6 text-md-end">
         <p>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Help &amp; FAQ</a>
+          <a href="#" class="text-white me-2">Privacy Policy</a>
+          <a href="#" class="text-white">Help &amp; FAQ</a>
         </p>
-        <p><a href="about.html">Contact us</a></p>
+        <p class="mb-0"><a href="about.html" class="text-white">Contact us</a></p>
+      </div>
     </div>
+  </div>
 </footer>
 
 </body>
